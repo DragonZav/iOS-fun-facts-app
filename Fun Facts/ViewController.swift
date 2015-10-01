@@ -8,8 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {    
-    
+class ViewController: UIViewController {
 
     @IBOutlet weak var funFactLabel: UILabel!
     @IBOutlet var funFactButton: UIView!
@@ -31,12 +30,8 @@ class ViewController: UIViewController {
     @IBAction func showFunFact() {
         
         let randomColor = colorWheel.randomColor()
-        
         funFactButton.tintColor = randomColor
-        
         view.backgroundColor = randomColor
-        
-        
         funFactLabel.text = factBook.randomFact()
     }
 

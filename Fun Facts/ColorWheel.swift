@@ -2,9 +2,9 @@
 //  ColorWheel.swift
 //  Fun Facts
 //
-//  Created by Chris Augg on 9/30/15.
-//  Copyright © 2015 Auggie Doggie iOSware. All rights reserved.
-//
+//  Created by teamtreehouse.com as part of their iOS/Android development courses
+//  modified by Chris Augg on 9/30/15 to meet the new iOS 9/ Xcode 7 standards.
+
 
 import Foundation
 import UIKit
@@ -22,6 +22,8 @@ struct ColorWheel {
     ]
     
     func randomColor() -> UIColor {
+        // changed var to let as a constant is more appropriate than a variable
+        // because there is no need to change anyting once they are set.
         let unsignedArrayCount = UInt32(colorsArray.count)
         let unsignedRandomNumber = arc4random_uniform(unsignedArrayCount)
         let randomNumber = Int(unsignedRandomNumber)
